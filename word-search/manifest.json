@@ -1,0 +1,12 @@
+{
+  "name": "Dictionary",
+  "description": "Know the word",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  }
+}

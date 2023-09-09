@@ -14,7 +14,6 @@ const copyColor = (e) => {
 // Function to show picked colors
 const showColors = () => {
   if (!pickedColors.length) return; // Return if there are no picked colors
-
   // Generate li for the picked color and add it to the colorList
   colorList.innerHTML = pickedColors
     .map(
@@ -28,8 +27,7 @@ const showColors = () => {
     `
     )
     .join("");
-
-  document.querySelector(".picked-colors").classList.remove("hide");
+  document.querySelector(".picked-colors").classList.remove("hide"); // Show the colorList element if it was hidden
 
   // Add a click event listener to each color element to copy the color code
   document.querySelectorAll(".color").forEach((li) => {
@@ -55,7 +53,7 @@ const activateEyeDropper = () => {
       // Add the color to the list if it doesn't already exist
       if (!pickedColors.includes(sRGBHex)) {
         pickedColors.push(sRGBHex);
-        localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+        localStorage.setItem("picked-colors", JSON.stringify(pickedColors)); //store the color in local storage
         showColors();
       }
     } catch (error) {
@@ -77,23 +75,23 @@ clearAllBtn.addEventListener("click", clearAllColors);
 colorPickerBtn.addEventListener("click", activateEyeDropper);
 
 // Disable right-click and F12 to prevent developer tools from being opened
-window.oncontextmenu = function () {
-  return false;
-};
+// window.oncontextmenu = function () {
+//   return false;
+// };
 
-document.addEventListener(
-  "keydown",
-  function (event) {
-    var key = event.key || event.keyCode;
+// document.addEventListener(
+//   "keydown",
+//   function (event) {
+//     var key = event.key || event.keyCode;
 
-    if (key == 123) {
-      return false;
-    } else if (
-      (event.ctrlKey && event.shiftKey && key == 73) ||
-      (event.ctrlKey && event.shiftKey && key == 74)
-    ) {
-      return false;
-    }
-  },
-  false
-);
+//     if (key == 123) {
+//       return false;
+//     } else if (
+//       (event.ctrlKey && event.shiftKey && key == 73) ||
+//       (event.ctrlKey && event.shiftKey && key == 74)
+//     ) {
+//       return false;
+//     }
+//   },
+//   false
+// );
