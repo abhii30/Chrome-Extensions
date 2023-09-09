@@ -1,0 +1,12 @@
+{
+  "name": "Add Bookmark",
+  "description": "Add Bookmark",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "resource/icon.png"
+    }
+  }
+}
