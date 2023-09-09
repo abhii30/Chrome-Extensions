@@ -5,10 +5,10 @@ const colorList = document.querySelector(".all-colors");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]");
 
 // Function to copy the color code to the clipboard and update the element text
-const copyColor = (elem) => {
-  elem.innerText = "Copied";
-  navigator.clipboard.writeText(elem.dataset.color);
-  setTimeout(() => (elem.innerText = elem.dataset.color), 1000);
+const copyColor = (e) => {
+  e.innerText = "Copied";
+  navigator.clipboard.writeText(e.dataset.color);
+  setTimeout(() => (e.innerText = e.dataset.color), 1000);
 };
 
 // Function to show picked colors
