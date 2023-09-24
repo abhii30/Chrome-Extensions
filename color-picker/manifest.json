@@ -1,6 +1,6 @@
 {
-  "name": "Add Bookmark",
-  "description": "Add Bookmark",
+  "name": "Color Picker",
+  "description": "Pick any color on the screen. Very helpful for the developers",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
